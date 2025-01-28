@@ -1,0 +1,252 @@
+:root {
+  --navy-blue: #003366;
+  --light-blue: #5bc0de;
+  --light-blue-transparent: rgba(91, 192, 222, 0.493);
+  --black: #16161d;
+  --white: #fff;
+  --light-color: #808080;
+  --silver: #bdc3c7;
+  --light-bg: #f5f5f8;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light-bg);
+}
+
+/* header section styling start */
+.nav-links li a.active {
+  color: var(--light-blue);
+  font-weight: bolder;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/services_hero.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+main {
+  padding: 2rem;
+}
+
+.services-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: var(--navy-blue);
+}
+/* end of header section styling  */
+
+/* Service Section Styles */
+.services-overview {
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-details {
+  flex: 1;
+  padding: 1rem;
+}
+
+.service-details h3 {
+  margin: 0.5rem 0;
+  color: var(--black);
+}
+
+.service-details ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.service-details .customer-promise {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--light-color);
+}
+
+.responsive-image {
+  width: 35%;
+  max-width: 500px;
+  height: auto;
+}
+/* end of services styling */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .service-details {
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .service-details ul {
+    margin-left: 1.5rem;
+  }
+
+  .service-details h3,
+  .service-details p,
+  .service-details .customer-promise {
+    margin-left: 0;
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Smaller screens (below 1024px) */
+@media (max-width: 1024px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .responsive-image {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .service-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .responsive-image {
+    max-width: 50%;
+    height: auto;
+  }
+}
+
+/* For screens between 1025px and 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .responsive-image {
+    width: 40%;
+    max-width: 450px;
+  }
+}
+
+/* For screens of 441px */
+@media (min-width: 1441px) {
+  .service-card {
+    padding: 3rem;
+  }
+
+  .responsive-image {
+    width: 30%;
+    max-width: 450px;
+  }
+}
+
+/* For ultra-wide screens above 2560px */
+@media (min-width: 2561px) {
+  .service-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  .responsive-image {
+    max-width: 25%;
+    height: auto;
+  }
+}
+
+/* Global Fixes */
+body {
+  overflow-x: hidden;
+}
+
+/* Global Fixes */
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.responsive-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+/* end */
