@@ -25,5 +25,5 @@ Strat Solutions International is a consultancy organization providing strategic 
 - **CSS3**: Styling and layout, with a focus on responsiveness and accessibility.
 - **JavaScript**: Adding interactivity and smooth user experience.
 
-official website link: coming soon
-But you can find the site on git pages 😊
+official website link: https://www.stratsolutionsinternational.com
+if you would like to give me feedback, you can email me at samthedev17@gmail.com  😊
